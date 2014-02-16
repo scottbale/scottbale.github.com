@@ -22,7 +22,7 @@ function share(s){
         name: 'Which industrial solvent are you?',
         caption: 'I got ' + s + '! Which industrial solvent are you?',
         link: 'http://balehaus.org/fb.html',
-        picture: 'http://balehaus.org/images/TolueneBromination2006.png'
+        picture: 'http://balehaus.org/images/bottles.jpg'
     }, function(response){});
 }
 

@@ -11,21 +11,70 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="javascripts/fb.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <![endif]-->
     </head>
     <body>
-
         <div id="fb-root"></div>
+
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+        appId      : "153693303582",
+        status     : true,
+        xfbml      : true
+    });
+
+    $("div.fb-share-button").click(function(e) {
+        share($(e.target).data("solvent"));
+    });
+};
+
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); 
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=153693303582";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+function share(s){
+    FB.ui({
+        method: 'feed',
+        app_id: "153693303582",
+        name: 'Which industrial solvent are you?',
+        caption: 'I got ' + s + '! Which industrial solvent are you?',
+        link: 'http://balehaus.org/fb.html',
+        picture: 'http://balehaus.org/images/bottles.jpg'
+    }, function(response){});
+}
+
+$(document).ready(function(){
+    $("a.list-group-item").click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $("div.solvent").hide();
+        $("div.solvent", e.target ).show( "fold", 1000 );
+    });
+
+});
+</script>
+
+
+
+
 
         <div class="wrapper">
             <header>
                 <h1>Which Industrial Solvent Are You?</h1>
-                <p><img src="images/TolueneBromination2006.png" ></p>
             </header>
+
+            <section>
+                <img src="images/TolueneBromination2006.png" >
+            </section>
 
             <section>
 
