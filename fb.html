@@ -27,10 +27,10 @@ window.fbAsyncInit = function() {
         xfbml      : true
     });
 
-    $("div.fb-feed-it a").click(function(e) {
+    $("div.solvent").click(function(e) {
         e.preventDefault();
         e.stopPropagation();
-        share($(e.target).data("solvent"));
+        share($(this).data("solvent"));
     });
 };
 
@@ -80,44 +80,34 @@ $(document).ready(function(){
 
                 <div class="list-group">
                     <a href="#" class="list-group-item">Pensive
-                        <div class="solvent" style="display:none">
-                            You are <strong>Trichloroethylene</strong>
-                            <div class="fb-feed-it">
-                              <a href="#" data-solvent="Trichloroethylene">Share on Facebook</a>
-                            </div>
+                        <div class="solvent" style="display:none" data-solvent="Trichloroethylene">
+                            <p>You are <strong>Trichloroethylene</strong></p>
+                            <p>Share on Facebook</p>
                         </div>
                     </a>
 
                     <a href="#" class="list-group-item">Sort of sleepy
-                        <div class="solvent" style="display:none">
-                            You are <strong>Isopropanol</strong>
-                            <div class="fb-feed-it">
-                              <a href="#" data-solvent="Isopropanol">Share on Facebook</a>
-                            </div>
+                        <div class="solvent" style="display:none" data-solvent="Isopropanol">
+                            <p>You are <strong>Isopropanol</strong></p>
+                            <p>Share on Facebook</p>
                         </div>
                     </a>
                     <a href="#" class="list-group-item">Giddy
-                        <div class="solvent" style="display:none">
-                            You are <strong>Dichloromethane</strong>
-                            <div class="fb-feed-it">
-                              <a href="#" data-solvent="Dichloromethane">Share on Facebook</a>
-                            </div>
+                        <div class="solvent" style="display:none" data-solvent="Dichloromethane">
+                            <p>You are <strong>Dichloromethane</strong></p>
+                            <p>Share on Facebook</p>
                         </div>
                     </a>
                     <a href="#" class="list-group-item">Sharp!
-                        <div class="solvent" style="display:none">
-                            You are <strong>Tetrahydrofuran</strong>
-                            <div class="fb-feed-it">
-                              <a href="#" data-solvent="Tetrahydrofuran">Share on Facebook</a>
-                            </div>
+                        <div class="solvent" style="display:none" data-solvent="Tetrahydrofuran">
+                            <p>You are <strong>Tetrahydrofuran</strong></p>
+                            <p>Share on Facebook</p>
                         </div>
                     </a>
                     <a href="#" class="list-group-item">Okay
-                        <div class="solvent" style="display:none">
-                            You are <strong>Ethyl acetate</strong>
-                            <div class="fb-feed-it">
-                              <a href="#" data-solvent="Ethyl acetate">Share on Facebook</a>
-                            </div>
+                        <div class="solvent" style="display:none" data-solvent="Ethyl acetate">
+                            <p>You are <strong>Ethyl acetate</strong></p>
+                            <p>Share on Facebook</p>
                         </div>
                     </a>
                 </div>          
