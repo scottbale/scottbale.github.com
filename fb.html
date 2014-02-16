@@ -27,7 +27,9 @@ window.fbAsyncInit = function() {
         xfbml      : true
     });
 
-    $("div.fb-share-button").click(function(e) {
+    $("div.fb-feed-it a").click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         share($(e.target).data("solvent"));
     });
 };
@@ -63,10 +65,6 @@ $(document).ready(function(){
 });
 </script>
 
-
-
-
-
         <div class="wrapper">
             <header>
                 <h1>Which Industrial Solvent Are You?</h1>
@@ -84,48 +82,42 @@ $(document).ready(function(){
                     <a href="#" class="list-group-item">Pensive
                         <div class="solvent" style="display:none">
                             You are <strong>Trichloroethylene</strong>
-
-                            <div class="fb-share-button" 
-                                 data-href="http://www.balehaus.org/fb.html" 
-                                 data-solvent="Trichloroethylene"
-                                 data-type="button_count"></div>
+                            <div class="fb-feed-it">
+                              <a href="#" data-solvent="Trichloroethylene">Share on Facebook</a>
+                            </div>
                         </div>
                     </a>
 
                     <a href="#" class="list-group-item">Sort of sleepy
                         <div class="solvent" style="display:none">
                             You are <strong>Isopropanol</strong>
-                            <div class="fb-share-button" 
-                                 data-href="http://www.balehaus.org/fb.html" 
-                                 data-solvent="Isopropanol",
-                                 data-type="button_count"></div>
+                            <div class="fb-feed-it">
+                              <a href="#" data-solvent="Isopropanol">Share on Facebook</a>
+                            </div>
                         </div>
                     </a>
                     <a href="#" class="list-group-item">Giddy
                         <div class="solvent" style="display:none">
                             You are <strong>Dichloromethane</strong>
-                            <div class="fb-share-button" 
-                                 data-href="http://www.balehaus.org/fb.html" 
-                                 data-solvent="Dichloromethane",
-                                 data-type="button_count"></div>
+                            <div class="fb-feed-it">
+                              <a href="#" data-solvent="Dichloromethane">Share on Facebook</a>
+                            </div>
                         </div>
                     </a>
                     <a href="#" class="list-group-item">Sharp!
                         <div class="solvent" style="display:none">
                             You are <strong>Tetrahydrofuran</strong>
-                            <div class="fb-share-button" 
-                                 data-href="http://www.balehaus.org/fb.html" 
-                                 data-solvent="Tetrahydrofuran",
-                                 data-type="button_count"></div>
+                            <div class="fb-feed-it">
+                              <a href="#" data-solvent="Tetrahydrofuran">Share on Facebook</a>
+                            </div>
                         </div>
                     </a>
                     <a href="#" class="list-group-item">Okay
                         <div class="solvent" style="display:none">
                             You are <strong>Ethyl acetate</strong>
-                            <div class="fb-share-button" 
-                                 data-href="http://www.balehaus.org/fb.html" 
-                                 data-solvent="Ethyl acetate",
-                                 data-type="button_count"></div>
+                            <div class="fb-feed-it">
+                              <a href="#" data-solvent="Ethyl acetate">Share on Facebook</a>
+                            </div>
                         </div>
                     </a>
                 </div>          
